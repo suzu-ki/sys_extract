@@ -1,0 +1,5 @@
+pdfminer.six
+spacy
+streamlit
+
+# 実行後、「python -m spacy download en_core_web_sm」
