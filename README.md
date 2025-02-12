@@ -27,14 +27,16 @@ streamlit run app.py
 自動でブラウザに立ち上がらなかったら、ターミナルに記述されるLocal URLにアクセス
 
 2. 英語論文入力
-
+<img src="./image/ex1.png" width="50%">
 
 以降は、任意になります
+
 3. 調べたい単語の選択
 
 4. 生成された検索文を[Consensus](https://consensus.app/)に入れて説明文を生成してもらう
+<img src="./image/ex2.png" width="50%">
 
-5. 生成された説明文を使って、[NoLang](https://no-lang.com/)に入れることで説明動画作成
+6. 生成された説明文を使って、[NoLang](https://no-lang.com/)に入れることで説明動画作成
 
 ## 終了
 システム終了：
