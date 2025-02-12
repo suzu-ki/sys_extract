@@ -16,26 +16,6 @@ st.title("専門用語抽出ツール")
 # PDFアップロード
 pdf_file = st.file_uploader("PDFをアップロード", type=["pdf"])
 
-# if pdf_file is not None:
-#     terms, key = process_pdf(pdf_file)
-#     col1, col2 = st.columns(2)
-#     with col1:
-#         st.write("抽出されたkeywords:")
-#         filter_key = st.text_input("検索")
-#         if filter_key:
-#             key = [k for k in key if filter_key.lower() in k.lower()]
-        
-#         st.write(key)
-    
-#     with col2:
-#         st.write("抽出された専門用語:")
-#         filter_term = st.text_input("検索")
-    
-#         if filter_term:
-#             terms = [term for term in terms if filter_term.lower() in term.lower()]
-        
-#         st.write(terms)
-
 if pdf_file is not None:
     terms, key = process_pdf(pdf_file)
     
@@ -57,30 +37,6 @@ if pdf_file is not None:
         
         
     st.subheader("抽出結果")
-    # 2列に分ける
-    # col1, col2 = st.columns(2)
-
-    # with col1:
-    #     st.write("抽出されたkeywords:")
-    #     filter_key = st.text_input("検索", key="filter_key_input")
-        
-    #     if filter_key:
-    #         # filter_key が空でない場合、key をフィルタリング
-    #         key = [term for term in key if filter_key.lower() in term.lower()]
-        
-    #     # フィルタリングされたkeyを表示
-    #     st.write(key)
-    
-    # with col2:
-    #     st.write("抽出された専門用語:")
-    #     filter_term = st.text_input("検索", key="filter_term_input")
-    
-    #     if filter_term:
-    #         # filter_term が空でない場合、terms をフィルタリング
-    #         terms = [term for term in terms if filter_term.lower() in term.lower()]
-        
-    #     # フィルタリングされたtermsを表示
-    #     st.write(terms)
     
     # Streamlitの列を作成
     col1, col2 = st.columns(2)

@@ -178,7 +178,6 @@ def extract_body_text3(file):
     
     f_references = True  # 参考文献を含めるかのフラグ
     
-    # with open(pathname, "rb") as f:
     parser = PDFParser(file)
     document = PDFDocument(parser)
     laparams = LAParams(all_texts=True)

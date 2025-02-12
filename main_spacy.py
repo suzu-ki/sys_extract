@@ -8,10 +8,6 @@ nlp = spacy.load('en_core_web_sm')
 def tokenize_text(text):
     # テキストを解析
     doc = nlp(text)
-
-    # # 名詞句を抽出
-    # specialized_terms = set([chunk.text for chunk in doc.noun_chunks if not re.search(r'\d', chunk.text)])
-    # print(specialized_terms)
     
     w_list = set()
     not_list = set()
@@ -28,11 +24,6 @@ def tokenize_text(text):
                     w_list.add(te)
         # print(f"Entity: {ent.text}, Label: {ent.label_}")
     
-    # result = (specialized_terms | w_list) - not_list
-
-    # 名詞句のリスト
-    # print(specialized_terms)
-    # return result
     return w_list
 
 def tokenize_text_title(text):
@@ -84,6 +75,7 @@ def app(file):
     return setlist, keylist
 
 
+# テスト用
 if __name__ == "__main__":
     dpath = './paper/'
     # filename = 'SiPhON提案論文.pdf'
@@ -116,7 +108,3 @@ if __name__ == "__main__":
         keylist[0] = keylist[0].split(': ')[1]
         print("\nkeyリスト:")
         print(keylist)
-    
-    
-    # con = generate_compounds(words_kanji)
-    # print(con)
